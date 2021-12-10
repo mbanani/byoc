@@ -1,0 +1,36 @@
+system:
+    random_seed: 8
+    num_workers: 6
+    num_gpus: 1
+paths:
+    tensorboard_dir: ~/tensor_logs
+    experiments_dir: ~/experiments
+train:
+    num_steps: 200000
+    eval_step: 5000
+    vis_step: 1000
+    loss_weights:    
+        vis: 1.0
+        v2g: 0.0
+        geo: 0.0
+    optimizer: Adam
+    lr: 0.0001
+    momentum: 0.9
+    weight_decay: 1e-6
+test:
+    checkpoint:
+        name: ""
+        time: timeless
+        epoch: 0
+        step: -1
+    split: test
+    align_cfg:
+        algorithm: weighted_procrustes
+        num_correspodances: 200
+        point_ratio: 0.05
+        num_seeds: 100
+        loss_weighting: lowe
+
+defaults:
+    - model: byoc
+    - dataset: scannet

@@ -1,0 +1,13 @@
+# @package _global_
+model:
+    visual_registration: True
+    geometric_registration: True
+    Rt_augmentation: False
+train:
+    loss_weights:    
+        vis: 1.0
+        v2g: 1.0
+        geo: 1.0
+experiment:
+    name: NoAugBYOC
+    rationale: Train the full model without augmentation

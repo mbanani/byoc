@@ -1,0 +1,7 @@
+name: ScanNet
+num_views: 2
+view_spacing: 20
+img_dim: 128
+num_workers: 4
+overfit: False
+batch_size: 8

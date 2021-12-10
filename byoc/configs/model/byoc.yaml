@@ -1,0 +1,17 @@
+name: BYOC
+visual_registration: True
+geometric_registration: False
+feat_dim: 32
+num_views: 2
+use_gt_vp: False
+voxel_size: 0.025
+Rt_augmentation: False
+alignment:
+    algorithm: weighted_procrustes
+    num_correspodances: 200 # 200 in each direction
+    point_ratio: 1.0
+    num_seeds: 1
+    loss_weighting: lowe
+v2g_transfer:
+    method: simsiam
+    weight: none

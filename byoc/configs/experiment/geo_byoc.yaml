@@ -1,0 +1,13 @@
+# @package _global_
+model:
+    visual_registration: False
+    geometric_registration: True
+    Rt_augmentation: False
+train:
+    loss_weights:    
+        vis: 0.0
+        v2g: 0.0
+        geo: 1.0
+experiment:
+    name: GeoBYOC
+    rationale: Train the geometric model
